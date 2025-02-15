@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* 기본으로 꼭 넣어놓기 */
+body, header, footer, section, div, h1, h2, h3, p, div, ul, li, nav{
+    margin: 0;
+    padding: 0;
+    /* *로 마진이랑 패딩 주지 말고 직접적으로 세팅 해줘야 충돌이 안 남 */
+}
+ul {    list-style: none;   }
+a {    text-decoration: none;   color: #333;   }
+img {   display: block;   border: 0px;}
+
+/* --- layout begin --- */
+body {
+    font-size: 16ox;
+    color: #333;
+    background-color: #ffffff;
+}
+#wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 100000;
+
+    background: #ccc;
+}
+header>h1 {
+    width: 200px;
+    height: 40px;
+}
+header>nav {
+    width: 640px;
+    height: 40px;
+}
+header>nav>ul {
+    width: 640px;
+    height: 40px;
+    display: flex;
+}
+header>nav>ul>li {
+    width: 160px;
+    height: 40px;
+    position: relative;
+}
+header>nav>ul>li>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: #333;
+    transition: all 0.4s;
+}
+header>nav>ul>li>.sub {
+    position: absolute;
+    width: 160px;
+    height: 120px;
+    left: 0;
+    top: 40px;
+    background-color: #fff;
+    display: none;
+}
+header>nav>ul>li>.sub>ul>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    transition: all 0.4s;
+}
+header>nav>ul>li:hover>a {
+    color: #333;
+    background: #fff;
+}
+header>nav>ul>li>.sub>ul>li>a:hover {
+    color: #fff;
+    background: #333;
+}
+
+
+.slides {
+    height: 300px;
+    position: relative;
+}
+.slides>.slides_container {
+    width: 1200px;
+    height: 900px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.slides>.slides_container>div {
+    height: 300px;
+    position: relative;
+}
+.slides>.slides_container>div>a {}
+.slides>.slides_container>div>a>p {
+    position: absolute;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.contents {
+    height: 200px;
+}
+.popup {
+    display: none;
+}
+footer {
+    height: 100px;
+}
