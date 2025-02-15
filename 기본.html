@@ -1,0 +1,46 @@
+https://mybox.naver.com/share/list?shareKey=PQ2PNp-ZMlY4WtDAg7kGhZaupKZaHnc8vujsGqQKscMA
+
+이미지 제작을 포토샵으로 해야할 수 있음
+되도록 30분 안으로 작업하기
+
+시험 시간은 3시간이기 때문에 이미지 제작에 크게 시간을 쓰지 않아야 함
+
+jquery(document).ready(function(){...여기다가 적어야지 제이쿼리가 적용이 됨...}) $(document)
+$('css selecter') -- 제이쿼리 개체로 호출
+
+display 제어 -> .hide(디스플레이 논 과 같음) / .show() 이런 건 popup창
+css 제어     -> .css('속성,값') \\ .css('속성') 이건 속성 값을 불러 옴
+                       .width(number), height(number)
+                            .css('width','300px') -> .width(300)
+                       클레스 추가 / 삭제
+                       .addClass('~') / .removeClass('~')
+                       .toggleClass('~')  이건 tap
+animation    -> selector.fadeIn(duration, function(){complete시 실행})
+                    **duration: 1/1000c초 (400 == 0.4s)
+                selector.fadeOut(duration,function(){})
+                    fadeIn -> display:none > block
+                    fadeOut -> display:none
+------------------------------------------------------------------------
+                selector.slideDown(d,f) display:none > block
+                selector.slideUp(d,f) > display:none
+------------------------------------------------------------------------
+                selector.animate({속성,목표값,...,...},time,function(){...})
+------------------------------------------------------------------------
+document output 명령 -> .html('~'), .text('~')
+document Input 명령
+        --- objA.append(objB)   : A안에 B를 제일 뒤로 삽입(추가)
+            objB.appendTo(objA) : A안에 B를 제일 뒤로 삽입(추가)
+            objA.prepend(objB)  : A안에 B를 제일 앞으로 삽입(추가)
+            objB.prependTo(objA): A안에 B를 제일 앞으로 삽입(추가)
+            selector.remove()   : 요소 삭제
+event 적용 -> on('~') 사용, 이벤트 함수 사용
+    selector.on('event1 event2',function(){...})
+        $('h1>a').on('click', function{ window.location.href="~";})
+        $('h1>a').click(function(){ window.location.reload();})
+        MouseEvent -- mouseover, mouseout, mouseenter, mouselever,
+                      click, mousemove, mousewheel, dblclick, ..
+
+
+리엑트 한 번 공부해보기(퍼블리셔로 갈 경우에는)
+프로필 페이지로 포폴 작업 해보기
+기업 페이지 포폴 한 번 해보기
