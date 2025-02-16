@@ -111,7 +111,6 @@ header>nav>ul>li>.sub>ul>li>a:hover {
     height: 300px;
     position: relative;
 }
-.slides>.slides_container>div>a {}
 .slides>.slides_container>div>a>p {
     position: absolute;
     padding: 10px 16px;
