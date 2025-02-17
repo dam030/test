@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* 기본 세팅 */
+body, header, section, footer, div, nav, ul, li, img, h1, h2, h3, p, a {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+img {
+    display: block;
+    border: 0;
+}
+
+/* 레이아웃 시작 */
+body {
+    background: #ffffff;
+    color: #333333;
+    font-size: 16px;
+}
+.wapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 헤더 시작 */
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 10px;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+}
+.header_box {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    align3items: center;
+    position: relative;
+}
+.header_box>h1>a {
+    height: 40px;
+}
+.navbar {
+    width: 640px;
+    height: 40px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -1px;
+    right: 10px;
+}
+.navback {
+    display: none;
+    width: 1200px;
+    height: 150px;
+    background: #333333;
+    position: absolute;
+    top: 40px;
+    left: -550px;
+}
+.navbar>ul {
+    display: flex;
+}
+.navbar>ul>li {
+    position: relative;
+}
+.navbar>ul>li>a {
+    width: 160px;
+    height: 40px;
+    display: block;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+}
+.navbar>ul>li>a:hover {
+    background: #333;
+    color: #fff;
+}
+.sub>ul>li {
+    display: none;
+    width: 160px;
+    height: 35px;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+}
+.sub>ul>li:hover {
+    background: #fff;
+    color: #333;
+}
