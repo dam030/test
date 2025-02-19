@@ -1,6 +1,5 @@
 @charset "utf-8";
-/* 기본 세팅 */
-body, header, section, footer, div, nav, ul, li, img, h1, h2, h3, p, a {
+body, header, section, footer, div, nav, ul, li, img, h1, h2, h3, p, a, select {
     padding: 0;
     margin: 0;
 }
@@ -15,87 +14,274 @@ img {
     display: block;
     border: 0;
 }
+/* 기본 세팅 끝 */
 
 /* 레이아웃 시작 */
 body {
-    background: #ffffff;
-    color: #333333;
-    font-size: 16px;
+    font-family: "맑은 고딕", sans-serif;
+    color: #333;
+    background: #fff;
 }
-.wapper {
-    width: 100%;
+
+.centerbox {
+    width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-/* 헤더 시작 */
+
 header {
     width: 100%;
     height: 100px;
-    padding: 0 10px;
-    background: #ccc;
-    display: flex;
-    justify-content: center;
+    background: #4ba3dd;
 }
-.header_box {
-    width: 1200px;
+header>.centerbox {
     height: 100px;
+    padding: 0 15px;
+    box-sizing: border-box;
     display: flex;
-    align3items: center;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
 }
-.header_box>h1>a {
+header>.centerbox>h1 {
+    width: 200px;
     height: 40px;
 }
-.navbar {
+header>.centerbox>.navbar {
     width: 640px;
     height: 40px;
-    background: #ffffff;
-    position: absolute;
-    bottom: -1px;
-    right: 10px;
+    position: relative;
+    z-index: 100;
+    align-self: flex-end;
 }
-.navback {
-    display: none;
-    width: 1200px;
-    height: 150px;
-    background: #333333;
-    position: absolute;
-    top: 40px;
-    left: -550px;
-}
-.navbar>ul {
+header>.centerbox>.navbar>ul {
     display: flex;
 }
-.navbar>ul>li {
-    position: relative;
-}
-.navbar>ul>li>a {
+header>.centerbox>.navbar>ul>li {
     width: 160px;
     height: 40px;
-    display: block;
-    border: 1px solid #333;
-    box-sizing: border-box;
-    font-weight: bold;
-    line-height: 40px;
-    text-align: center;
+    position: relative;
 }
-.navbar>ul>li>a:hover {
+header>.centerbox>.navbar>ul>li>a {
+    display: block;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    background: #fff;
+    transition: all 0.4s;
+}
+header>.centerbox>.navbar>ul>li:hover>a {
     background: #333;
     color: #fff;
 }
-.sub>ul>li {
-    display: none;
+.sub {
+    position: absolute;
+    left: 0px;
+    top: 40px;
     width: 160px;
-    height: 35px;
-    box-sizing: border-box;
-    color: #fff;
-    line-height: 35px;
-    text-align: center;
+    height: 160px;
+    display: none;
 }
-.sub>ul>li:hover {
+.sub a {
+    display: block;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.4s;
+}
+.sub a:hover {
     background: #fff;
     color: #333;
+}
+.sub_bg {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 1200px;
+    height: 160px;
+    background: #333;
+    display: none;
+    z-index: 10;
+}
+/* 해더 끝 */
+
+.slide_container {
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+}
+.slide_container>.slides {
+    width: 3600px;
+    height: 300px;
+    display: flex;
+    position: relative;
+}
+.slide_container>.slides>a {
+    position: relative;
+    background: #000;
+    width: 1200px;
+    height: 300px;
+}
+.slide_container>.slides>a>img {
+    opacity: 0.5;
+}
+.slide_container>.slides>a>p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 3px 5px rgb(0,0,0,0.8);
+}
+
+.content_bottom {
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+.content_bottom>div {
+    width: 400px;
+    height: 200px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.content_bottom>div>h3 {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-bottom: 0px;
+    /* box-sizing: border-box; */
+    text-align: center;
+    line-height: 39px;
+    position: relative;
+    z-index: 10;
+    top: 1px;
+    font-size: 16px;
+}
+.notice>.content {
+    width: 360px;
+    height: 139px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.notice>.content>ul {
+    width: 100%;
+}
+.notice>.content>ul>li>a {
+    width: 100%;
+    height: 26px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted #ccc;
+}
+.gallery>.content {
+    width: 360px;
+    height: 139px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.gallery>.content>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.content_bottom>.direct {
+    padding: 0px 0px;
+}
+/* 콘텐츠 종료 */
+
+.popup_bg {
+    width: 400px;
+    height: 250px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 100;
+    display: none;
+}
+.popup {
+    width: 400px;
+    height: 250px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.popup>h3 {
+    width: 100%;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 10px;
+}
+.popup>p {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.popup>a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid #ccc;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+/* 모달창 종료 */
+
+footer>.centerbox {
+    height: 100px;
+    display: flex;
+}
+footer>.centerbox>.copright {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer>.centerbox>.footer_btns {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+footer>.centerbox>.footer_btns>.sns {
+    width: 200px;
+    height: 50px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+footer>.centerbox>.footer_btns>.sns>ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer>.centerbox>.footer_btns>.sns>ul>li>a>img {
+    width: 40px;
+}
+footer>.centerbox>.footer_btns>.familysite {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
