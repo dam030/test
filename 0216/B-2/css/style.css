@@ -167,7 +167,7 @@ header>.centerbox>.navbar>ul>li:hover>a {
 }
 .notice>.content {
     width: 360px;
-    height: 139px;
+    height: 150px;
     padding: 10px 15px;
     box-sizing: border-box;
     background: #fff;
@@ -187,7 +187,7 @@ header>.centerbox>.navbar>ul>li:hover>a {
 }
 .gallery>.content {
     width: 360px;
-    height: 139px;
+    height: 150px;
     padding: 10px 15px;
     box-sizing: border-box;
     background: #fff;
@@ -202,7 +202,12 @@ header>.centerbox>.navbar>ul>li:hover>a {
     gap: 10px;
 }
 .content_bottom>.direct {
-    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_bottom>.direct>a>img {
+    width: 360px;
 }
 /* 콘텐츠 종료 */
 
