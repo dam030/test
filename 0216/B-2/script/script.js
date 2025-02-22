@@ -11,7 +11,7 @@ $(function(){
     // navbar 세팅
 
     function slideMove(){
-        $('.slides').animate({'left':'-1200px'}, 500, function(){
+        $('.slides').animate({'left':'-1200px'}, 400, function(){
             $('.slides>a:first-child').appendTo($('.slides'));
             $('.slides').css('left','0px');
         });
