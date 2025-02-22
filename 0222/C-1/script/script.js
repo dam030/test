@@ -6,10 +6,10 @@ $(function(){
     });
 
     $('.gnb>ul>li').mouseover(function(){
-        $(this).find('.sub').stop().slideDown();
+        $(this).find('.sub').stop().slideDown(450);
     });
     $('.gnb>ul>li').mouseout(function(){
-        $(this).find('.sub').stop().slideUp();
+        $(this).find('.sub').stop().slideUp(450);
     });
 
     function slideMove(){
@@ -24,4 +24,11 @@ $(function(){
 
     };
     setInterval (slideMove, 3000)
+
+    $('.modal').click(function(){
+        $('.popup').show();
+    });
+    $('.close').click(function(){
+        $('.popup').hide();
+    });
 });
