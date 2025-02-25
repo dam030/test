@@ -151,15 +151,6 @@ header>nav>ul>li>.sub>li:hover>a {
     height: 400px;
     object-fit: cover;
 }
-.slide>li:nth-child(1)>a>img {
-    background: cadetblue;
-}
-.slide>li:nth-child(2)>a>img {
-    background: crimson;
-}
-.slide>li:nth-child(3)>a>img {
-    background: darksalmon;
-}
 .slide>li>a>span {
     color: #fff;
     font-size: 42px;
@@ -177,18 +168,17 @@ header>nav>ul>li>.sub>li:hover>a {
     top: 0;
     right: 0;
 }
-.thumbnail>ul {}
 .thumbnail>ul>li img {
     width: 150px;
     height: 100px;
 }
-.thumbnail>ul>li:nth-child(1) img {
+.slide1 img {
     background: cadetblue;
 }
-.thumbnail>ul>li:nth-child(2) img {
+.slide2 img {
     background: crimson;
 }
-.thumbnail>ul>li:nth-child(3) img {
+.slide3 img {
     background: darksalmon;
 }
 /* 슬라이드 끝 */
@@ -277,7 +267,6 @@ header>nav>ul>li>.sub>li:hover>a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    display: none;
 }
 .notic>li>a {
     display: flex;
@@ -291,4 +280,88 @@ header>nav>ul>li>.sub>li:hover>a {
 }
 
 .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+.gallery>li>a>img {
+    width: 200px;
+    height: 150px;
+}
+/* 탭 끝 */
+
+
+
+.popup {
+    width: 400px;
+    height: 300px;
+    background: #fff;
+    padding: 15px 10px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.popup>h3 {
+    font-size: 20px;
+    line-height: 28px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+.popup>p {
+    padding: 10px;
+    line-height: 20px;
+}
+.popup>button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+/* 모달 끝 */
+
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+footer>.footer_logo {
+    width: 200px;
+    height: 100px;
+    font-size: 28px;
+    line-height: 100px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+footer>.copy {
+    width: calc(100% - 200px - 300px);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+footer>.sns {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+footer>.sns img {
+    width: 60px;
+    height: 60px;
 }
