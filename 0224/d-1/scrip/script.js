@@ -10,9 +10,9 @@ $(function(){
     // 나브바
 
     function slideMove(){
-        $('.slide').animate({'top':'400px'}, 500, function(){
+        $('.slide').animate({'bottom':'400px'}, 500, function(){
             $('.slide>li:first-child').appendTo($('.slide'));
-            $('.slide').css('top', '0px')
+            $('.slide').css('bottom', '0px')
         });
     };
     setInterval(slideMove, 3000);
