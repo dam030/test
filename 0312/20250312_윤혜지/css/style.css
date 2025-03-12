@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+
+html, body, section, div, ul, li, p, button, strong, span, img, h1, h2, h3, footer {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+}
+img {
+    display: block;
+}
+html {
+    width: 100%;
+    height: 100vh;
+}
+body {
+    color: #333333;
+    background: #ffffff;
+}
+/* 기본세팅 */
+.main {
+    width: 100%;
+    height: calc(100% - 120px);
+    display: flex;
+}
+header {
+    width: 200px;
+    height: 100%;
+}
+header>.logo {
+    width: 200px;
+    height: 100px;
+}
+header>.logo>a {
+    width: 200px;
+    height: 100px;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+header>.navbar {
+    width: 200px;
+}
+header>.navbar>ul {
+    padding: 0 auto;
+}
+header>.navbar>ul>li {}
+header>.navbar>ul>li>a {
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    background: #fff;
+}
+header>.navbar>ul>li:hover>a {
+    background: lightcoral;
+    color: #fff;
+}
+header>.navbar>ul>li>.sub {
+    width: 180px;
+    display: none;
+}
+header>.navbar>ul>li>.sub>li {
+    width: 180px;
+}
+header>.navbar>ul>li>.sub>li>a {
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+header>.navbar>ul>li>.sub>li:hover>a {
+    background: indianred;
+    color: #fff;
+}
+header>.login {}
