@@ -18,15 +18,15 @@ $(function(){
 
     function slideMove(){
         let slideWidth = $('.slide img').width();
-        $('.slides>ul').animate({'left':-slideWidth}, 300, function(){
-            $('.slides>ul>li').eq(0).appendTo($('.slides>ul'));
-            $('.slides>ul').css('left','0px');
+        $('.slide').animate({'left':-slideWidth}, 300, function(){
+            $('.slide>li').eq(0).appendTo($('.slide'));
+            $('.slide').css('left','0px');
         });
-        setInterval(slideMove, 3000);
     };
+    setInterval(slideMove, 3000);
 
-    $('.tabs>a').click(function(event){
-        event.preventDefault();
+    $('.tabs>a').click(function(){
+        // event.preventDefault();
         $('.tabs').removeClass('active');
         $(this).parent().addClass('active');
     });
