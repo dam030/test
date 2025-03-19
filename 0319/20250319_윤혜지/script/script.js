@@ -25,8 +25,9 @@ $(function(){
         setInterval(slideMove, 3000);
     };
 
-    $('.tabs').click(function(){
-        $('.tabs').removeClass();
-        $('.tabs').addClass('active');
+    $('.tabs>a').click(function(event){
+        event.preventDefault();
+        $('.tabs').removeClass('active');
+        $(this).parent().addClass('active');
     });
 });
