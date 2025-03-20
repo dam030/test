@@ -1,6 +1,7 @@
 $(function(){
     // 기본세팅
-    $('nav>ul').mouseenter(function(){
+    $('nav>ul').mouseenter(function(event){
+        event.preventDefault();
         $('.sub').slideDown();
         $('.sub_bg').slideDown();
     });
@@ -26,7 +27,6 @@ $(function(){
     setInterval(slideMove, 3000);
 
     $('.tabs>a').click(function(){
-        // event.preventDefault();
         $('.tabs').removeClass('active');
         $(this).parent().addClass('active');
     });
