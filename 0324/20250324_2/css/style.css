@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+html, body, header, section, div, h1, h2, h3, p, span, strong, a, img, nav, ul, li, button, select, option {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+}
+img, span, strong {
+    display: block;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+}
+/* 기본세팅 */
+
+
+.main {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-wrap: row wrap;
+}
+.main>header {
+    width: 200px;
+    height: 650px;
+}
+.main>header>h1 {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.main>header>nav {
+    width: 170px;
+    margin: 0 auto;
+}
+.main>header>nav>ul {
+    width: 170px;
+}
+.main>header>nav>ul>li {
+    width: 170px;
+    border: 1px solid #333;
+    border-bottom: 0px;
+}
+.main>header>nav>ul>li:last-child {
+    border-bottom: 1px solid #333;
+}
+.main>header>nav>ul>li>a {
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+.main>header>nav>ul>li:hover>a {
+    background: #00b493;
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+.main>header>nav>ul>li>.sub {
+    display: none;
+}
+.main>header>nav>ul>li>.sub>li {
+    width: 170px;
+}
+.main>header>nav>ul>li>.sub>li>a {
+    width: 170px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+.main>header>nav>ul>li>.sub>li:hover>a {
+    background: #89d3c5;
+    color: #fff;
+}
+
+.main>.cotants {
+    width: calc(100% - 200px);
+    height: 650px;
+}
+
+.main>.cotants>.contants_top {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+}
+
+.main>.cotants>.contants_top>.slides {
+    width: calc(100% - 230px);
+    height: 400px;
+    overflow: hidden;
+}
+.main>.cotants>.contants_top>.slides>.slide {
+    width: 300%;
+    height: 400px;
+    display: flex;
+    position: relative;
+}
+.main>.cotants>.contants_top>.slides>.slide>li {
+    width: 100%;
+}
+.main>.cotants>.contants_top>.slides>.slide>li>a {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: #000;
+}
+.main>.cotants>.contants_top>.slides>.slide>li>a>img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.main>.cotants>.contants_top>.slides>.slide>li>a>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.main>.cotants>.contants_top>.aside {
+    width: 230px;
+    height: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main>.cotants>.contants_top>.aside>a {
+    width: 210px;
+    height: 380px;
+    background: #000;
+    position: relative;
+    color: #fff;
+}
+.main>.cotants>.contants_top>.aside>a>img {
+    width: 210px;
+    height: 380px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.main>.cotants>.contants_top>.aside>a>strong {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-size: 18px;
+}
+.main>.cotants>.contants_top>.aside>a>span {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+.main>.cotants>.contants_top>.aside>a>img:last-child {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    opacity: 1;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+.main>.cotants>.tabs {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+.main>.cotants>.tabs>.tab {
+    width: 50%;
+    height: 250px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.main>.cotants>.tabs>.tab>a {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.main>.cotants>.tabs>.tab>ul {
+    width: 90%;
+    height: 201px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #333;
+    position: absolute;
+    top: 39px;
+    display: flex;
+}
+.main>.cotants>.tabs>.tab>.notic {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.main>.cotants>.tabs>.tab>.notic>li>a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    line-height: 32px;
+    border-bottom: 1px solid #bbb;
+}
+.main>.cotants>.tabs>.tab>.gallery {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.main>.cotants>.tabs>.tab>.gallery a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main>.cotants>.tabs>.tab>.gallery img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+}
+
+
+
+.popup_bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000000;
+    display: none;
+}
+.popup_bg>.popup {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
+.popup_bg>.popup>h2 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 60px;
+}
+.popup_bg>.popup>span {
+    text-align: center;
+    line-height: 24px;
+}
+.popup_bg>.popup>.close {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 2px 7px;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #eee;
+    display: flex;
+}
+footer>h3 {
+    width: 200px;
+    height: 100px;
+}
+footer>.copy {
+    width: 100%;
+    height: 100px;
+    padding: 41px 60px;
+    box-sizing: border-box;
+}
+footer>.famillysite {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer>.famillysite>#familly {
+    width: 140px;
+    height: 25px;
+}
